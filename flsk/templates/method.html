@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+		<meta name="generator" content="Hugo 0.88.1">
+		<title>Dashboard Template  Bootstrap v5.1</title>
+		
+		<script src="../static/js/echarts.js"></script>
+		
+		<link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dashboard/">
+		
+		<script src="https://cdn.jsdelivr.net/npm/echarts@5.3.2/dist/echarts.js"></script>
+		
+		<script type="text/javascript" src="../static/js/jquery-3.6.0.js"></script>
+		
+		<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+		
+		<script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
+			  
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
+			  
+		<script src="../static/js/dashboard.js"></script>
+		
+		
+		
+		
+		<!-- Bootstrap core CSS -->
+		<link href="../static/css/bootstrap.min.css" rel="stylesheet">
+		
+		<style>
+			.bd-placeholder-img {
+				font-size: 1.125rem;
+				text-anchor: middle;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				user-select: none;
+			}
+		
+			@media (min-width: 768px) {
+				.bd-placeholder-img-lg {
+					font-size: 3.5rem;
+				}
+			}
+			
+		</style>
+		
+		<!-- Custom styles for this template -->
+		<link href="../static/css/dashboard.css" rel="stylesheet">
+		
+		
+		
+	</head>
+	<body>
+		<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+			<a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 " href="#">Electricity Forecast</a>
+			
+			<button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			
+			
+			
+			<div class="navbar-nav">
+				<div class="nav-item text-nowrap">
+				<a class="nav-link px-3" href="logout" style="color: white;">Sign out</a>
+				</div>
+			</div>
+		
+		</header>
+		
+		<div class="container-fluid">
+			<div class="row" >
+				
+				
+				
+			
+				<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-white sidebar collapse">
+					<div class="position-sticky pt-3">
+						<ul class="nav flex-column ">
+							<li class="nav-item">
+								<a class="nav-link " aria-current="page" href="/index">
+									<span data-feather="home"></span>
+									Dashboard
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link active" href="#">
+									<span data-feather="file"></span>
+									Forecast
+								</a>
+							</li>
+							<!-- <li class="nav-item">
+								<a class="nav-link" href="#">
+									<span data-feather="shopping-cart"></span>
+									Products
+								</a>
+							</li> -->
+						</ul>
+					</div>
+				</nav>
+				
+				<div class="col-md-12 ms-sm-auto col-lg-10 px-md-4 bg-white">
+					<script ></script>
+					<div id="card-936995">
+						<div class="card">
+							<div class="card-header">
+								 <a class="card-link" data-toggle="collapse" data-parent="#card-936995" href="#card-element-216813">CNN MODEL Predict  Result</a>
+							</div>
+							
+							<div id="card-element-216813" class="collapse show">
+								<div class="card-body">
+									
+										<div class="col-md-3 column ui-sortable " style="height: 300px;width: 560px;float: left;margin-right: 20px;">
+											<img src="../static/cnn.jpg" alt="cnn" height="275" width="550">
+										</div>
+										<div class="col-md-3 column ui-sortable " style="height: 300px;width: 360px;float: left;" id="container"></div>
+										
+										<script type="text/javascript">
+											var chartDom = document.getElementById('container');
+											var myChart = echarts.init(chartDom);
+											var option;
+											
+											option = {
+											  xAxis: {
+												type: 'category',
+												data: ['0:00', '1:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00']
+											  },
+											  yAxis: {
+												type: 'value'
+											  },
+											  series: [
+												{
+												  data:  [129.5, 221.5, 311.7, 359.3, 398.5, 393.3, 348.8, 357.6, 368.5, 340.3, 313.1, 306.3, 309.6, 319.5, 335.4, 356.3, 373.9, 378.6, 384.7, 414.9, 448.1, 446.5, 375.0, 294.8],
+												  type: 'line'
+												}
+											  ]
+											};
+											
+											option && myChart.setOption(option);
+										</script>
+
+									
+								</div>
+								
+							</div>
+							
+						</div>
+						
+						<div class="card">
+							<div class="card-header">
+								 <a class="card-link" data-toggle="collapse" data-parent="#card-936995" href="#card-element-268680">LSTM MODEL Predict  Result</a>
+							</div>
+							<div id="card-element-268680" class="collapse show">
+								<div class="card-body">
+									<div class="col-md-3 column ui-sortable " style="height: 300px;width: 560px;float: left;margin-right: 20px;">
+										<img src="../static/lstm.jpg" alt="lstm" height="250" width="550">
+									</div>
+									<div class="col-md-3 column ui-sortable " style="height: 300px;width: 360px;float: left;" id="container_1"></div>
+									
+									<script type="text/javascript">
+										var chartDom = document.getElementById('container_1');
+										var myChart = echarts.init(chartDom);
+										var option;
+										
+										option = {
+										  xAxis: {
+											type: 'category',
+											data: ['0:00', '1:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00']
+										  },
+										  yAxis: {
+											type: 'value'
+										  },
+										  series: [
+											{
+											  data:  [37.5, 68.3, 118.2, 116.1, 141.8, 179.3, 222.8, 270.9, 285.3, 271.1, 263.9, 269.4, 279.9, 295.5, 306.5, 317.4, 328.5, 336.6, 318.8, 298.1, 286.4, 276.8, 254.3, 236.1],
+											  type: 'line'
+											}
+										  ]
+										};
+										
+										option && myChart.setOption(option);
+									</script>
+								</div>	
+							</div>
+						</div>
+						
+						<div class="card">
+							<div class="card-header">
+								 <a class="card-link" data-toggle="collapse" data-parent="#card-936995" href="#card-element-216814">Encoder-Decoder MODEL Predict  Result</a>
+							</div>
+							<div id="card-element-216814" class="collapse show">
+								<div class="card-body">
+									<div class="col-md-3 column ui-sortable " style="height: 300px;width: 560px;float: left;margin-right: 20px;">
+										<img src="../static/E-D-lstm.jpg" alt="lstm" height="280" width="565">
+									</div>
+									<div class="col-md-3 column ui-sortable " style="height: 300px;width: 360px;float: left;" id="container_2"></div>
+									
+									<script type="text/javascript">
+										var chartDom = document.getElementById('container_2');
+											var myChart = echarts.init(chartDom);
+											var option;
+											
+											option = {
+											  xAxis: {
+												type: 'category',
+												data: ['0:00', '1:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00']
+											  },
+											  yAxis: {
+												type: 'value'
+											  },
+											  series: [
+												{
+												  data:  [153.7, 142.0, 170.4, 164.5, 193.4, 237.6, 331.6, 422.4, 473.9, 453.8, 433.9, 416.1, 389.0, 369.0, 355.4, 355.1, 369.9, 377.5, 389.2, 424.1, 443.8, 433.5, 350.9, 252.8],
+												  type: 'line'
+												}
+											  ]
+											};
+											
+											option && myChart.setOption(option);
+										</script>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header">
+								 <a class="card-link" data-toggle="collapse" data-parent="#card-936995" href="#card-element-216815">CNN-LSTM MODEL Predict  Result</a>
+							</div>
+							<div id="card-element-216815" class="collapse show">
+								<div class="card-body">
+									<div class="col-md-3 column ui-sortable " style="height: 400px;width: 560px;float: left;margin-right: 20px;">
+										<img src="../static/cnn-lstm.jpg" alt="lstm" height="380" width="600">
+									</div>
+									<div class="col-md-3 column ui-sortable " style="height: 300px;width: 360px;float: left;" id="container_3"></div>
+									
+									<script type="text/javascript">
+										var chartDom = document.getElementById('container_3');
+											var myChart = echarts.init(chartDom);
+											var option;
+											
+											option = {
+											  xAxis: {
+												type: 'category',
+												data: ['0:00', '1:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00']
+											  },
+											  yAxis: {
+												type: 'value'
+											  },
+											  series: [
+												{
+												  data:  [63.4, 117.9, 163.1, 159.5, 178.4, 195.1, 267.5, 299.6, 310.1, 272.1, 255.3, 261.6, 277.0, 292.7, 304.3, 306.8, 311.2, 314.8, 307.5, 293.9, 290.5, 298.3, 259.0, 252.2],
+												  type: 'line'
+												}
+											  ]
+											};
+											
+											option && myChart.setOption(option);
+										</script>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header">
+								 <a class="card-link" data-toggle="collapse" data-parent="#card-936995" href="#card-element-216816">CONVLSTM MODEL Predict  Result</a>
+							</div>
+							<div id="card-element-216816" class="collapse show">
+								<div class="card-body">
+									<div class="col-md-3 column ui-sortable " style="height: 300px;width: 560px;float: left;margin-right: 20px;">
+										<img src="../static/convlstm.jpg" alt="lstm" height="275" width="550">
+									</div>
+									<div class="col-md-3 column ui-sortable " style="height: 300px;width: 360px;float: left;" id="container_4"></div>
+									
+									<script type="text/javascript">
+										var chartDom = document.getElementById('container_4');
+											var myChart = echarts.init(chartDom);
+											var option;
+											
+											option = {
+											  xAxis: {
+												type: 'category',
+												data: ['0:00', '1:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00']
+											  },
+											  yAxis: {
+												type: 'value'
+											  },
+											  series: [
+												{
+												  data:  [78.7, 115.9, 153.2, 171.2, 203.0, 239.1, 279.0, 322.6, 327.5, 292.5, 279.3, 295.8, 312.5, 306.1, 295.0, 288.3, 307.1, 319.2, 299.5, 304.8, 317.8, 328.1, 298.2, 247.7],
+												  type: 'line'
+												}
+											  ]
+											};
+											
+											option && myChart.setOption(option);
+										</script>
+								</div>
+							</div>
+						</div>
+					</div>
+					<table class="table">
+						<thead>
+							<tr>
+								<th>
+									#
+								</th>
+								<th>
+									model
+								</th>
+								<th>
+									rmse
+								</th>
+								<th>
+									max rmse
+								</th>
+								<th>
+									min rmse
+								</th>
+								<th>
+									mae
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									1
+								</td>
+								<td>
+									cnn
+								</td>
+								<td>
+									351
+								</td>
+								<td>
+									448
+								</td>
+								<td>
+									129
+								</td>
+								<td>
+									255
+								</td>
+							</tr>
+							<tr class="table-active">
+								<td>
+									2
+								</td>
+								<td>
+									lstm
+								</td>
+								<td>
+									254
+								</td>
+								<td>
+									336
+								</td>
+								<td>
+									37
+								</td>
+								<td>
+									186
+								</td>
+							</tr>
+							<tr class="table-success">
+								<td>
+									3
+								</td>
+								<td>
+									en-de-lstm
+								</td>
+								<td>
+									353
+								</td>
+								<td>
+									473
+								</td>
+								<td>
+									142
+								</td>
+								<td>
+									211
+								</td>
+							</tr>
+							<tr class="table-warning">
+								<td>
+									4
+								</td>
+								<td>
+									cnn-lstm
+								</td>
+								<td>
+									261
+								</td>
+								<td>
+									310
+								</td>
+								<td>
+									63
+								</td>
+								<td>
+									190
+								</td>
+							</tr>
+							<tr class="table-danger">
+								<td>
+									5
+								</td>
+								<td>
+									convlstm
+								</td>
+								<td>
+									274
+								</td>
+								<td>
+									327
+								</td>
+								<td>
+									78
+								</td>
+								<td>
+									197
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="dropdown">
+						 
+						<button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+							Action
+						</button>
+						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+							 <a class="dropdown-item disabled" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
+						</div>
+					</div>
+				</div>
+				
+				
+			</div>
+		</div>
+		
+			
+		<script src="../static/js/bootstrap.bundle.min.js"></script>
+		
+		<script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
+	  
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
+	  
+		<script src="../static/js/dashboard.js"></script>	
+		
+		<script src="../static/js/jquery.min.js"></script>
+		<script src="../static/js/bootstrap_1.min.js"></script>
+		
+		
+		
+		
+		
+		
+		
+	</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 50px;
+				background-color: skyblue;
+				margin: 40px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--设置点击事件  方式1-->
+		<div onclick="aaa()">点击这里</div>
+		<!--方式2  更常用-->
+		<div>看我看我</div>
+	</body>
+</html>
+<script type="text/javascript">
+	//对应实现点击事件的方法
+	function aaa(){
+		console.log("哈哈哈");
+		var body = document.getElementsByTagName("body")[0];
+		body.style.backgroundColor = "yellow";
+	}
+	//--------
+	//方式2
+	var two_div = document.getElementsByTagName("div")[1];
+	//绑定点击事件  一旦单击div  立马执行function
+	two_div.onclick = function(){
+		console.log("你好!");
+	}
+	
+	
+</script>
+
+<script type="text/javascript">
+	
+	
+</script>
